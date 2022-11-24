@@ -1,0 +1,132 @@
+.section-our-gallery {
+  background-color: var(--services-gallery-background-color);
+
+  h2 {
+    padding: 2rem 0;
+  }
+
+  .gallery-imgs {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-text-box {
+    padding: 3rem 0;
+    text-align: center;
+    background-color: var(--primary-color);
+
+    h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      letter-spacing: normal;
+    }
+
+    h3 {
+      color: var(--white-text-color);
+      font-size: 1rem;
+      text-transform: none;
+    }
+
+    .submit {
+      display: inline-block;
+      background-color: var(--white-text-color);
+      margin: 1rem 0 0 0;
+
+      form {
+        display: flex;
+        input {
+          border: none;
+        }
+
+        input::placeholder {
+          padding: 0 0 0 0.5rem;
+        }
+
+        input[type="submit"] {
+          margin: 0.1rem;
+          padding: 0.3rem;
+        }
+      }
+    }
+  }
+  @media (min-width: 51.31rem) {
+    .gallery-imgs {
+      display: grid;
+      grid-template: 1fr 1fr / 1fr 1fr;
+    }
+    input[type="submit"]:hover {
+      color: var(--white-text-color);
+      background-color: var(--primary-color);
+    }
+  }
+
+  @media (min-width: 76.875rem) {
+    .gallery-imgs {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+
+      .image-box {
+        position: relative;
+      }
+      .image {
+        display: block;
+      }
+      .zoom-icon {
+        transition: 0.5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--gallery-hover-color);
+      }
+      .image-box:hover .zoom-icon {
+        opacity: 1;
+        cursor: pointer;
+      }
+
+      .bi-search {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        fill: var(--white-text-color);
+        width: 3rem;
+        height: auto;
+      }
+    }
+
+    .gallery-text-box {
+      padding: 3rem 0;
+      text-align: center;
+      background-color: var(--primary-color);
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+      }
+
+      .submit {
+        form {
+          display: flex;
+          input {
+            width: 12rem;
+            border: none;
+          }
+
+          input[type="submit"] {
+            width: 6rem;
+          }
+        }
+      }
+    }
+  }
+}

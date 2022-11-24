@@ -1,0 +1,75 @@
+.section-featured-tours {
+  padding: 2rem 1.5rem;
+
+  a {
+    text-align: center;
+  }
+
+  .tours-boxs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+
+    .tour-box {
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+  }
+
+  .tour-img-box {
+    position: relative;
+
+    p {
+      font-size: 0.9rem;
+      display: inline-block;
+      padding: 0.3rem;
+      background-color: var(--primary-color);
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  .tour-text-box {
+    padding: 0 1rem;
+    h3 {
+      text-transform: none;
+    }
+
+    .tour-text-box-description {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .tour-country {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        color: var(--primary-color);
+        font-size: 600;
+      }
+    }
+  }
+
+  @media (min-width: 51.31rem) {
+    .tours-boxs {
+      display: grid;
+      grid-template: 1fr 1fr / 1fr 1fr;
+
+      .tour-box:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        transition: 0.3s;
+      }
+    }
+  }
+  @media (min-width: 76.875rem) {
+    .section-featured-tours {
+      padding: 3rem 0;
+    }
+
+    .tours-boxs {
+      max-width: 75rem;
+      margin: 0 auto;
+      grid-template: 1fr 1fr / repeat(3, 1fr);
+    }
+  }
+}

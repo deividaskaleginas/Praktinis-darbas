@@ -1,0 +1,56 @@
+.section-about-us {
+  padding: 2rem 1.5rem;
+
+  img {
+    padding: 2rem 0;
+  }
+}
+
+@media (min-width: 51.31rem) {
+  .about-us-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 3rem 0 6rem 0;
+
+    .about-us-img-box {
+      position: relative;
+      height: 17rem;
+      width: 25rem;
+      border: 0.5rem solid var(--primary-color);
+
+      img {
+        position: absolute;
+        padding: 0;
+        left: 5%;
+        top: 3%;
+      }
+    }
+  }
+}
+@media (min-width: 76.875rem) {
+  .section-about-us {
+    margin: 2rem auto;
+    h2 {
+      letter-spacing: 0.5rem;
+    }
+    .about-us-box {
+      max-width: 75rem;
+      margin: 0 auto;
+      grid-template-columns: 3fr 2fr;
+      justify-items: center;
+      gap: 3rem;
+      .about-us-img-box {
+        height: 26rem;
+        width: 40rem;
+      }
+      .about-us-text-box {
+        h3 {
+          font-size: 2rem;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

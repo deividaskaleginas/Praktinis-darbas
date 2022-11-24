@@ -1,0 +1,48 @@
+.section-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1.5rem 0;
+  height: 90vh;
+  text-align: center;
+  background-color: var(--hero-gallery-background-color);
+
+  p {
+    color: var(--white-text-color);
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+  }
+
+  button {
+    display: block;
+    color: var(--white-text-color);
+    background-color: var(--primary-color);
+    max-width: 7.5rem;
+    margin: 2rem auto 0;
+    border: none;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.2rem;
+    box-shadow: 1px 1px 1px rgb(65, 65, 65);
+  }
+}
+@media (min-width: 51.31rem) {
+  .section-hero {
+    height: 60vh;
+    background-image: linear-gradient(#645cff99, #22222299),
+      url(/images/hero.jpg);
+    background-size: cover;
+
+    button:hover,
+    button:active {
+      background-color: #382ef0;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 68.75rem) {
+  .section-hero {
+    height: 70vh;
+  }
+}
